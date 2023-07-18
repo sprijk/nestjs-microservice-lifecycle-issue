@@ -3,11 +3,11 @@ import { ConfigModule } from '@nestjs/config';
 
 import { AppController } from './app.controller';
 import { AppService } from './app.service';
-import kafka from './config/kafka';
+import tcp from './config/tcp';
 
 const configModule = ConfigModule.forRoot({
   isGlobal: true,
-  load: [kafka],
+  load: [tcp],
 });
 
 @Module({
